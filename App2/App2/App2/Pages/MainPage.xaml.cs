@@ -12,6 +12,7 @@ namespace XamarinExam.Pages
             InitializeComponent();
            
         }
+
        
     }
 }

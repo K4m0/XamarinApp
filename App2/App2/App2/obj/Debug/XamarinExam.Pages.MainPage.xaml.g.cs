@@ -17,12 +17,8 @@ namespace XamarinExam.Pages {
     public partial class MainPage : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.ListView LvwTopFreeApps;
-        
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MainPage));
-            LvwTopFreeApps = this.FindByName<global::Xamarin.Forms.ListView>("LvwTopFreeApps");
         }
     }
 }

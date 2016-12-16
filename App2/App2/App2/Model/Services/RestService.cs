@@ -52,8 +52,8 @@ namespace XamarinExam.Model.Services
                         topFreeApp.Link = o["feed"]["entry"][i]["link"]["attributes"]["href"].ToString();
                         topFreeApp.Category = o["feed"]["entry"][i]["category"]["attributes"]["label"].ToString();
                         topFreeApp.ReleaseDate = o["feed"]["entry"][i]["im:releaseDate"]["attributes"]["label"].ToString();
-
-                        TopFreeApps.Add(topFreeApp);
+                        
+                        TopFreeApps.Insert(i,topFreeApp);
                     }
 
                     

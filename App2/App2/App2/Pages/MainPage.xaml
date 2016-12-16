@@ -13,7 +13,7 @@
     <StackLayout Orientation="Vertical">
       <SearchBar  Placeholder="Enter book name to search" Text="{Binding SearchMaterial}"  SearchCommand="{Binding OnTextChanged}" ></SearchBar>
     <ListView ItemsSource="{Binding TopFreeApps}" IsRefreshing="{Binding IsBusy}"
-               IsPullToRefreshEnabled="True" RefreshCommand="{Binding RefreshCommand}" SelectedItem="OnItemSelected" x:Name="LvwTopFreeApps">
+               IsPullToRefreshEnabled="True" RefreshCommand="{Binding RefreshCommand}" >
       <ListView.ItemTemplate>
         <DataTemplate>
           <TextCell Text="{Binding Title}" Detail="{Binding Category}"></TextCell>

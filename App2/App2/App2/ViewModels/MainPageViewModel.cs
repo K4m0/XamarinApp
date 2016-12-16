@@ -108,14 +108,6 @@ namespace XamarinExam.ViewModels
             IsBusy = false;
         }
 
-        private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            TopFreeApp selecTopFreeApps = (TopFreeApp)e.SelectedItem;
-            if (selecTopFreeApps == null)
-                return;
-           
-            
-        }
 
         public ICommand OnTextChanged
         {
