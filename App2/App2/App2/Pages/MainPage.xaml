@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:XamarinExam.ViewModels;assembly=XamarinExam"
+             x:Class="XamarinExam.Pages.MainPage"
+             Title="Main page">
+  <ContentPage.BindingContext>
+    <viewModels:MainPageViewModel />
+  </ContentPage.BindingContext>
+  
+  <ContentPage.Content>
+    
+    <StackLayout Orientation="Vertical">
+      <SearchBar  Placeholder="Enter book name to search" Text="{Binding SearchMaterial}"  SearchCommand="{Binding OnTextChanged}" ></SearchBar>
+    <ListView ItemsSource="{Binding TopFreeApps}" IsRefreshing="{Binding IsBusy}"
+               IsPullToRefreshEnabled="True" RefreshCommand="{Binding RefreshCommand}" SelectedItem="OnItemSelected" x:Name="LvwTopFreeApps">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding Title}" Detail="{Binding Category}"></TextCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    <ActivityIndicator IsRunning="{Binding IsBusy}"></ActivityIndicator>
+    <Button Text="Add Book" Command="{Binding OnAddBook}"></Button>
+    <Button Text="Add Magazine"  Command="{Binding OnAddMagazine}"></Button>
+  </StackLayout>
+    </ContentPage.Content>
+  
+</ContentPage>

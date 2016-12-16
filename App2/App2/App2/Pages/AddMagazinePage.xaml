@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:XamarinExam.ViewModels;assembly=XamarinExam"
+             x:Class="XamarinExam.Pages.AddMagazinePage" 
+             Title="Add Magazine">
+  
+  <ContentPage.BindingContext>
+    <viewModels:AddMagazineViewModel/>
+  </ContentPage.BindingContext>
+
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="Magazine Name"></Label>
+      <Entry Placeholder="Magazine Name" Text="{Binding Magazine.Name}"></Entry>
+      <Label Text="Publisher"></Label>
+      <Entry Placeholder="Publisher" Text="{Binding Magazine.Publisher}" ></Entry>
+      <Label Text="Publish Date"></Label>
+      <Entry Placeholder="Publish Date" Text="{Binding Magazine.PublishDate}" ></Entry>
+      <Label Text="Version"></Label>
+      <Entry Placeholder="Version" Text="{Binding Magazine.Version}" ></Entry>
+      <Button Text="Add Magazine" Command="{Binding OnAddMagazineClick}"></Button>
+      <Button Text="Cancel" Command="{Binding OnCancelClick}"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

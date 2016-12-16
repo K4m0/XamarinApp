@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:XamarinExam.ViewModels;assembly=XamarinExam"
+             x:Class="XamarinExam.Pages.LoginPage" 
+             Title="Login">
+
+  <ContentPage.BindingContext>
+    <viewModel:LoginViewModel />
+  </ContentPage.BindingContext>
+  
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="UserName"></Label>
+      <Entry Text="{Binding User.UserName}" Placeholder="User Name"></Entry>
+      <Label Text="Password"></Label>
+      <Entry Text="{Binding User.Password}" IsPassword="True"  Placeholder="Password"></Entry>
+      <Button Text="Login" Command="{Binding OnLoginClick}"></Button>
+      <Button Text="Register" Command="{Binding OnRegisterClick}"></Button>
+
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:XamarinExam.ViewModels;assembly=XamarinExam"
+             x:Class="XamarinExam.Pages.RegisterPage" 
+             Title="Register">
+  
+  <ContentPage.BindingContext>
+    <viewModels:RegisterViewModel />
+  </ContentPage.BindingContext>
+
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="Full Name"></Label>
+      <Entry Placeholder="Full Name" Text="{Binding User.FullName}"></Entry>
+      <Label Text="User Name"></Label>
+      <Entry Placeholder="User Name" Text="{Binding User.UserName}"></Entry>
+      <Label Text="Password"></Label>
+      <Entry Placeholder="Password" Text="{Binding User.Password}" IsPassword="True"></Entry>
+      <Label Text="Confirm Password"></Label>
+      <Entry Placeholder="Confirm Password" Text="{Binding Password}" IsPassword="True"></Entry>
+      <Button Text="Create User" Command="{Binding OnCreateUserClick}"></Button>
+      <Button Text="Cancel" Command="{Binding OnCancelClick}"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

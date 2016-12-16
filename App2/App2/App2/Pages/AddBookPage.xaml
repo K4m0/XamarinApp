@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:XamarinExam.ViewModels;assembly=XamarinExam"
+             x:Class="XamarinExam.Pages.AddBookPage" 
+             Title="Add Book">
+  
+  <ContentPage.BindingContext>
+    <viewModels:AddBookViewModel/>
+  </ContentPage.BindingContext>
+
+  <ContentPage.Content>
+    <StackLayout>
+      <Label Text="Book Name"></Label>
+      <Entry Placeholder="Book Name" Text="{Binding Book.Name}"></Entry>
+      <Label Text="Publisher"></Label>
+      <Entry Placeholder="Publisher" Text="{Binding Book.Publisher}" ></Entry>
+      <Label Text="Publish Date"></Label>
+      <Entry Placeholder="Publish Date" Text="{Binding Book.PublishDate}" ></Entry>
+      <Label Text="Author"></Label>
+      <Entry Placeholder="Author" Text="{Binding Book.Author}" ></Entry>
+      <Button Text="Add Book" Command="{Binding OnAddBookClick}"></Button>
+      <Button Text="Cancel" Command="{Binding OnCancelClick}"></Button>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
